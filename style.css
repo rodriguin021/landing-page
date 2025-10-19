@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #b76e79;
+}
+
+header h1 span {
+  color: #8a4b56;
+  font-weight: bold;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #b76e79;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1581092335144-7d9dbf5b99e2?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn-hero {
+  background-color: #b76e79;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn-hero:hover {
+  background-color: #8a4b56;
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+  padding: 100px 10%;
+  background: #f8f9fa;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.sobre-texto h3 {
+  color: #b76e79;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.sobre-texto p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== SERVIÇOS ===== */
+.servicos {
+  text-align: center;
+  padding: 100px 10%;
+}
+
+.servicos h3 {
+  color: #b76e79;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h4 {
+  color: #b76e79;
+  margin: 15px 0 5px;
+}
+
+.card p {
+  padding: 0 20px 20px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+  text-align: center;
+  padding:100px 10%;
+  background: #f8f9fa;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  margin-top: 40px;
+  padding: 15px 40px;
+  border-radius: 30px;
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebd5a;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f1f1f1;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 340px;
+  }
+}
